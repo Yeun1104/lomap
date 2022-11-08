@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>매장 인증 페이지</title>
+    <script src="jumju.js"></script>
+    <style>
+    </style>
+    <link href= master-citation.css rel="stylesheet">
+    <link rel="icon" href="Hlog.png" type="image/x-icon">
+</head>  
+<body>
+     <header class="header">
+        <nav>
+            <button class="si" style="background-color: #4842ff3a;">매장 인증</button>
+            <button class="si"type="button" onclick="location.href='store.html';">상품 등록</button>
+        </nav>
+     </header>
+<main>
+    <article class="article">
+        
+        <div class="box" >
+            <input type="file" id="image" accept="image/*" onchange="setThumbnail(event);"/>
+            <div id="image_container"></div>
+            <p class="text1">사업자등록증 업로드</p>
+        </div>
+        <div class="box2">
+            <p class="text2">매장 사진 앞</p>
+        </div>
+        <div class="box3">
+            <p class="text3">매장 사진 안쪽</p>
+        </div>
+        <form>
+            상호  <INPUT TYPE = "TEXT"  NAME = "name" SIZE = "20" class="name" >
+            사업장 소재지  <INPUT TYPE = "TEXT"  NAME = "address" SIZE = "20" class="address" >
+            사업장 전화번호  <INPUT TYPE = "TEXT"  NAME = "phnumber" SIZE = "20" class="phnumber" >
+            사업자 등록번호  <INPUT TYPE = "TEXT"  NAME = "buisnessumber" SIZE = "20" class="buisnessumber" >
+            업태 <INPUT TYPE = "TEXT"  NAME = "mubc" SIZE = "20" class="mubc" >
+        </form>
+    </article>
+</main>
+</body>

@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="jumju.js"></script>
     <meta charset="UTF-8">
-    <title>7dren</title>
+    <title>상품 등록 페이지</title>
     <style>
     </style>
-    <link href= mmm22.css rel="stylesheet">
+    <link href= store.css rel="stylesheet">
+    <link rel="icon" href="Hlog.png" type="image/x-icon">
 </head>
 <body>
      <header class="header">
         <nav>
-            <button class="si">인증하세요</button>
-            <button class="si">매장관리</button>
+            <button class="si"type="button" onclick="location.href='master-citation.html';">매장 인증</button>
+            <button class="si" style="background-color: #4842ff3a;">상품 등록</button>
         </nav>
      </header>
-<article class="article">
-    <div>
-        <div>
+<main>
+    <article class="article">
+        <div class="bacode">
             <button id="bcd_button">바코드 입력</button>
             <input type="text" id="bcd_input">
         </div>
-        <div>
             <!--button class="img_button">이미지</button-->
-            <div class="oooo">제품 이름 : 123123123</div>
-            <div class="oooo">제품 코드 : 123123123</div>
-            <div class="oooo">색상 : black</div>
-            <div class="oooo">수량 : 3123</div>
+        <div class="oooo">
+        <form>
+            제품 이름 :   <INPUT TYPE = "TEXT"  NAME = "name" SIZE = "20" class="name" ><br><br>
+            제품 코드 :   <INPUT TYPE = "TEXT"  NAME = "code" SIZE = "20" class="code" ><br><br>
+            색상 :   <INPUT TYPE = "TEXT"  NAME = "color" SIZE = "20" class="color" ><br><br>
+            수량 :   <INPUT TYPE = "TEXT"  NAME = "num" SIZE = "20" class="num" >
+        </form>
 
-            <div>
-                <div class="size">이미지</div>
-                <div class="box"></div>
+        <div>
+            <div class="size">이미지  /
+                <input type="file" id="image" accept="image/*" onchange="setThumbnail(event);"/>
+            </div>
+            <div class="box">
+                <div id="image_container"></div>
             </div>
         </div>
-        </div>
-</article>
+    </article>
+</main>
 </body>
