@@ -25,10 +25,9 @@
 
 
 #info {
-    width: 60%; height: 85%;
+    height: 90%;
     background-color:transparent;
     background-color: a(0.5);
-    border-radius:  0px 30px 0px 0px;
     position:fixed;
     left:0%;
     bottom:0%;
@@ -37,11 +36,18 @@
     margin-top : 14px;
     margin-left: 36px;
 }
-
+/* article{
+    width: 100%; height: 0%;
+    background-color: black;
+    position: fixed;
+    bottom:0;
+    left: 0;
+    right: 0;
+    top: 0;
+} */
 #info main{
-    width: 370px; height: 60%;
+    width: 370px; height: 100%;
     margin: 14px;
-    background-color: white;
     border-radius: 20px 20px 0px 0px;
     border: 5px solid transparent;
     background-image: linear-gradient(#f3f3f3, #ffffff), linear-gradient(to right, #0800ffaa, #65d3ffaa);
@@ -83,16 +89,10 @@
     background-clip: content-box, border-box;
     box-shadow: 5px 5px 5px gray;
 }
-#info div{
+#info li{
     margin:5px;
     border-radius: 13px;
     border: 2px solid blue;
-}
-
-.side_info div {
-    width: 100px;
-    height: 100px;
-    float: left
 }
 
 input::placeholder{
