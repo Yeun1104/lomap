@@ -10,6 +10,7 @@
 }
 
 .search-box button{
+  margin-top: 10px;
     margin-left: 5px;
     border-radius: 50px;
     height: 45px;
@@ -30,6 +31,7 @@
     width: 270px;
     border-radius: 50px;
     box-shadow: 5px 5px 5px gray;
+    margin: 10px;
 }
 input::placeholder{
     text-align:center;
@@ -108,3 +110,9 @@ input::placeholder{
       font-size:24px;
     }
   }
+
+.mimg{
+  width: 110px;
+  height: 72x;
+  padding-left: 767px;
+}

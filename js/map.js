@@ -32,52 +32,34 @@ var map = new naver.maps.Map('map', {
         position: new naver.maps.LatLng(37.5548695,126.9703638),
         map: map
     });
-    marker5 = new naver.maps.Marker({
-        position: new naver.maps.LatLng(37.5642944,126.9830961),
-        map: map
-    });
     
 
 //설명 창의 설명
 var contentString1 = [
         '<div class="iw_inner">',
         '   <h3>뉴발란스 명동점</h3>',
-        '   <p>서울특별시 중구 명동 명동3길 6 뉴발란스 개양빌딩 1층<br/>02-318-1906',
+        '   <p>서울특별시 중구 명동 명동3길 6 뉴발란스 개양빌딩 1층<br/>02-318-1906<br>수량 : 2',
         '   </p>',
         '</div>'
     ].join(' '), //하나의 문자열로 이아즘
     contentString2 = [
         '<div class="iw_inner">',
         '   <h3>뉴발란스 슈즈 롯데백화점본점</h3>',
-        '   <p>서울특별시 중구 남대문로 81<br/>02-772-3248',
+        '   <p>서울특별시 중구 남대문로 81<br/>02-772-3248<br>수량 : 1',
         '   </p>',
         '</div>'
     ].join(' '),
     contentString3 = [
         '<div class="iw_inner">',
         '   <h3>뉴발란스 신세계본점신관점</h3>',
-        '   <p>서울특별시 중구 충무로1가 52-20<br/>02-310-5263',
+        '   <p>서울특별시 중구 충무로1가 52-20<br/>02-310-5263<br>수량 : 0',
         '   </p>',
         '</div>'
     ].join(' '),
     contentString4 = [
         '<div class="iw_inner">',
         '   <h3>뉴발란스 롯데영플라자</h3>',
-        '   <p>서울특별시 중구 남대문로 67<br/>02-773-0065',
-        '   </p>',
-        '</div>'
-    ].join(' '),
-    contentString5 = [
-        '<div class="iw_inner">',
-        '   <h3>뉴발란스 롯데아울렛서울역점</h3>',
-        '   <p>서울특별시 중구 한강대로 405<br/>02-6965-2800',
-        '   </p>',
-        '</div>'
-    ].join(' '),
-    contentString6 = [
-        '<div class="iw_inner">',
-        '   <h3>뉴발란스 명동2점</h3>',
-        '   <p>서울특별시 중구 명동 명동3길 6 뉴발란스 개양빌딩 1층<br/>02-318-1906',
+        '   <p>서울특별시 중구 남대문로 67<br/>02-773-0065<br>수량 : 0',
         '   </p>',
         '</div>'
     ].join(' ');
@@ -95,12 +77,6 @@ var infowindow1 = new naver.maps.InfoWindow({
 }),
     infowindow4 = new naver.maps.InfoWindow({
     content: contentString4
-}),
-    infowindow5 = new naver.maps.InfoWindow({
-    content: contentString5
-}),
-    infowindow6 = new naver.maps.InfoWindow({
-    content: contentString6  
 });
 
 naver.maps.Event.addListener(marker, "click", function(e) {
@@ -130,19 +106,16 @@ naver.maps.Event.addListener(marker3, "click", function(e) {
     } else {
         infowindow4.open(map, marker3);
     }
-});
-naver.maps.Event.addListener(marker4, "click", function(e) {
-    if (infowindow5.getMap()) {
-        infowindow5.close();
-    } else {
-        infowindow5.open(map, marker4);
-    }
-});
-naver.maps.Event.addListener(marker5, "click", function(e) {
-    if (infowindow6.getMap()) {
-        infowindow6.close();
-    } else {
-        infowindow6.open(map, marker5);
-    }
 }); //마크 눌렀을때 창 뿅뿅 하는 활동띠
+
+const li = document.querySelectorAll('.item_list li');
+
+li.forEach((v)=>{
+  v.addEventListener('click',(e)=>{
+    infowindow1.open(map, marker);
+  })
+});
+
+
+
 }

@@ -100,7 +100,9 @@ input::placeholder{
 
 .itme_info{
     font-weight: bold;
-    margin-left: 150px;
+    margin-left: 140px;
+    font-size: 14px;
+    padding:13px;
 }
 
 li.itme_info{
@@ -111,4 +113,10 @@ li.itme_info{
 
 .shop_info{
     font-size: 10px;
+}
+
+li img{
+    width: 130px; 
+    height: 130px;
+    border-radius: 10px;
 }
