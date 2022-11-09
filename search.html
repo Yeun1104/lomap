@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="search.css">
-    <style>
-      * {
-        animation-name: movingPara;
-        animation-duration: 2s;
-      }
-      @keyframes movingPara {
-        from { margin-bottom: 100%; }
-        to { margin-top: 0%; }
-      }
+  <title>MoDmap</title>
+  <link rel="stylesheet" href="css/search.css">
+  <link rel="icon" href="img/Hlog.png" type="image/x-icon">
+  <style>
+    input {
+      animation-name: movingPara;
+      animation-duration: 3s;
+    }
+    @keyframes movingPara {
+      from { margin-bottom: 270%; }
+      to { margin-top: 0; }
+    }
+    p {
+      animation: fadein 3s;
+      -moz-animation: fadein 3s; /* Firefox */
+      -webkit-animation: fadein 3s; /* Safari and Chrome */
+      -o-animation: fadein 3s; /* Opera */
+    }
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
     </style>
 </head>
 <body>
     <div class="search-box">
-        <form action="main.html">
-          <input class="search-txt" type="text" placeholder="찾으시는 제품을 입력하세요.">
-          <button class="btn-img"><img src="free-icon-search-149852.png"></button>
-          <p><a href="login.html">*혹시 점주이신가요?</a></p>
-        </form>
+      <form action="main.html">
+        <input class="search-txt" type="text" placeholder="찾으시는 제품을 입력하세요.">
+        <button class="btn-img"><img src="img/free-icon-search-149852.png"></button>
+        <p><a href="login.html">*혹시 점주이신가요?</a></p>
+      </form>
+    </div>
+      <footer>
+      <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(117,247,255,0.6" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(11,0,165,0.4)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,0,255,0.3)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(0,0,255,0.3)" />
+        </g>
+        </svg>
       </div>
+      </footer>
 </body>
 </html>

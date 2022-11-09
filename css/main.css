@@ -30,23 +30,15 @@
     background-color: a(0.5);
     position:fixed;
     left:0%;
-    bottom:0%;
+    bottom: 5px;
 }
 #info header{
     margin-top : 14px;
     margin-left: 36px;
 }
-/* article{
-    width: 100%; height: 0%;
-    background-color: black;
-    position: fixed;
-    bottom:0;
-    left: 0;
-    right: 0;
-    top: 0;
-} */
+
 #info main{
-    width: 370px; height: 100%;
+    width: 370px; height: 90%;
     margin: 14px;
     border-radius: 20px 20px 0px 0px;
     border: 5px solid transparent;
@@ -56,17 +48,6 @@
     box-shadow: 5px 5px 5px gray;
 }
 
-/*#info article{
-    width: 90%; height: 90%;
-    position: absolute;
-    bottom: 0;
-    float: left;
-    margin-left: 10px;  
-    margin-bottom: 10px;
-    background-color: whitesmoke;
-    border-radius:  30px 30px 30px 30px;
-    border: 3px solid rgb(0, 19, 95);
-}*/
 #info input{
     border-radius: 50px;
     height:40px;
@@ -89,6 +70,15 @@
     background-clip: content-box, border-box;
     box-shadow: 5px 5px 5px gray;
 }
+
+#info button:hover{
+    border: 3px solid transparent; 
+    background-image: linear-gradient(#f3f3f3, #ffffff), linear-gradient(to right, #0800ffaa, #65d3ffaa);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background-color: rgb(42, 42, 42);
+    box-shadow: 5px 5px 5px gray;
+}
 #info li{
     margin:5px;
     border-radius: 13px;
@@ -108,7 +98,17 @@ input::placeholder{
     float: left;
 }
 
-.shop_name{
-    margin: 15px;
+.itme_info{
+    font-weight: bold;
     margin-left: 150px;
+}
+
+li.itme_info{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.shop_info{
+    font-size: 10px;
 }
